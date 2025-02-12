@@ -355,7 +355,6 @@ class HttpHandler(BaseHttpHandler):
         last_successful_read = (
             self.last_successful_read[1] if self.last_successful_read else time.time()
         )
-        grace_period = 300  # 5 min
         we_can_get_new_reqs = last_successful_read > time.time() - grace_period
 
         error = ""

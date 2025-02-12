@@ -11,7 +11,7 @@ fingerprint:
   composition.py: bafybeiaorp75iva5xgl4ebk3lg7oenqmd6wg2dxlm33oserb7aszyujml4
   dialogues.py: bafybeifhydd6xmstbh2jx5igj33upip5a3hhlcaxttfsc77heszqmru7ri
   fsm_specification.yaml: bafybeib5yne2ke3oc4amgehhn75vajexr3sedehdzmuabhyrovfqpmuipe
-  handlers.py: bafybeihdmarceo33ye7m4ut7j6hijc75cwhl4i7glbfmmcvcgnado4yqmi
+  handlers.py: bafybeiczu4ygfo6bim3xtjufviijccpxrvspjybegpnya6bdpbqcyq2an4
   models.py: bafybeigpimz5vhgzelhc7c3ipo56wh2o7d7whyqcjd2kjigtxos5d6bwqa
 fingerprint_ignore_patterns: []
 connections:
@@ -23,7 +23,7 @@ skills:
 - valory/abstract_round_abci:0.1.0:bafybeiepfm4dz4kwdv7rjozhgekjn6dheft7ca6fih4jj4olhffn2xrhs4
 - valory/registration_abci:0.1.0:bafybeiclrvoscx5xarcg5sr7io5hcbhqxx3hjxdkzkomh2dqrsgt7cbncu
 - valory/reset_pause_abci:0.1.0:bafybeicz7p5jdarlq2yubla3korxsaetbpp2g7vaahylpqxy2fjurtfxvq
-- valory/task_submission_abci:0.1.0:bafybeifudgzon6grzhe2wadawfjnw7ad3ce26aiu6kepvz3otbc3elupim
+- valory/task_submission_abci:0.1.0:bafybeid7vetmykos7sxlki5owexe3ga55jhybirn737qxxgmjezfeckhay
 - valory/termination_abci:0.1.0:bafybeiety5ucnnd245p72i2pfxmuzkwglapglblbldnncozdbrbvx7obiy
 - valory/transaction_settlement_abci:0.1.0:bafybeiho77x27kfytgjnipcjco3nfhvyfdjr43vxsqmjlig7k2krmckvv4
 - valory/subscription_abci:0.1.0:bafybeievufepx3n3l2wtqeyli53fm7foqngxyha5abssfu5azcj7bc3f34
@@ -124,7 +124,7 @@ models:
       max_healthcheck: 120
       multisend_address: '0x0000000000000000000000000000000000000000'
       on_chain_service_id: null
-      polling_interval: 25
+      polling_interval: 30.0
       request_retry_delay: 1.0
       request_timeout: 10.0
       reset_pause_duration: 10

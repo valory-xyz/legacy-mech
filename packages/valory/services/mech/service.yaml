@@ -7,7 +7,7 @@ license: Apache-2.0
 fingerprint:
   README.md: bafybeif7ia4jdlazy6745ke2k2x5yoqlwsgwr6sbztbgqtwvs3ndm2p7ba
 fingerprint_ignore_patterns: []
-agent: valory/mech:0.1.0:bafybeia66f2tm75ruoo7h7vuhnftqpqdkopa54ryn56iak2uyewyxh3s6a
+agent: valory/mech:0.1.0:bafybeia5mqdd3kuope5c4fizprykqkuk3onb52z7fafyvfemtl5nxvedjq
 number_of_agents: 4
 deployment:
   agent:
@@ -68,6 +68,7 @@ type: skill
         mech_to_subscription: ${MECH_TO_SUBSCRIPTION:list:[["0x77af31De935740567Cf4fF1986D04B2c964A786a",["0x0000000000000000000000000000000000000000","1"]]]}
         agent_funding_amount: ${AGENT_FUNDING_AMOUNT:int:200000000000000000}
         minimum_agent_balance: ${MINIMUM_AGENT_BALANCE:int:100000000000000000}
+        polling_interval: ${POLLING_INTERVAL:float:30.0}
 1:
   models:
     params:
@@ -107,6 +108,7 @@ type: skill
         mech_to_subscription: ${MECH_TO_SUBSCRIPTION:list:[["0x77af31De935740567Cf4fF1986D04B2c964A786a",["0x0000000000000000000000000000000000000000","1"]]]}
         agent_funding_amount: ${AGENT_FUNDING_AMOUNT:int:200000000000000000}
         minimum_agent_balance: ${MINIMUM_AGENT_BALANCE:int:100000000000000000}
+        polling_interval: ${POLLING_INTERVAL:float:30.0}
 2:
   models:
     params:
@@ -146,6 +148,7 @@ type: skill
         mech_to_subscription: ${MECH_TO_SUBSCRIPTION:list:[["0x77af31De935740567Cf4fF1986D04B2c964A786a",["0x0000000000000000000000000000000000000000","1"]]]}
         agent_funding_amount: ${AGENT_FUNDING_AMOUNT:int:200000000000000000}
         minimum_agent_balance: ${MINIMUM_AGENT_BALANCE:int:100000000000000000}
+        polling_interval: ${POLLING_INTERVAL:float:30.0}
 3:
   models:
     params:
@@ -185,6 +188,7 @@ type: skill
         mech_to_subscription: ${MECH_TO_SUBSCRIPTION:list:[["0x77af31De935740567Cf4fF1986D04B2c964A786a",["0x0000000000000000000000000000000000000000","1"]]]}
         agent_funding_amount: ${AGENT_FUNDING_AMOUNT:int:200000000000000000}
         minimum_agent_balance: ${MINIMUM_AGENT_BALANCE:int:100000000000000000}
+        polling_interval: ${POLLING_INTERVAL:float:30.0}
 ---
 public_id: valory/task_execution:0.1.0
 type: skill

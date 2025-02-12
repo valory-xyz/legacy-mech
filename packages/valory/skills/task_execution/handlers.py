@@ -172,6 +172,8 @@ class ContractHandler(BaseHandler):
         reqs = body.get("data", [])
         if len(reqs) == 0:
             # for healthcheck metrics
+            queue_size = len(self.pending_tasks)
+            self.context.logger.info(f"Number of pending tasks: {queue_size=}")
             self.set_last_successful_read(self.params.from_block)
             return
 
@@ -196,6 +198,8 @@ class ContractHandler(BaseHandler):
         self.context.logger.info(
             f"Monitoring new reqs from block {self.params.from_block}"
         )
+        queue_size = len(self.pending_tasks)
+        self.context.logger.info(f"Number of pending tasks: {queue_size=}")
 
 
 class LedgerHandler(BaseHandler):

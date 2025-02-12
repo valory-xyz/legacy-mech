@@ -12,7 +12,7 @@ fingerprint:
   dialogues.py: bafybeibmac3m5u5h6ucoyjr4dazay72dyga656wvjl6z6saapluvjo54ne
   fsm_specification.yaml: bafybeidtmsmpunr3t77pshd3k2s6dd6hlvhze6inu3gj7xyvlg4wi3tnuu
   handlers.py: bafybeibe5n7my2vd2wlwo73sbma65epjqc7kxgtittewlylcmvnmoxtxzq
-  models.py: bafybeifyjplmgynxult3evmpsudtmcuqrcabcsoheegdznaefd73mhns6y
+  models.py: bafybeifihjpw5dsusouepcilp7hjlqh5qmf6zmbrrxobb6e3i4ovymfxpm
   payloads.py: bafybeia2yorri2u5rwh6vukb6iwdrbn53ygsuuhthns2txptvjipyb6f4e
   rounds.py: bafybeig76qqga22xx53gss3h3qqzz5uc7gwnhwaxpsumpojeaawh5pqgem
   tasks.py: bafybeicu5t5cvfhbndgpxbbtmp4vbmtyb6fba6vsnlewftvuderxp5lwcy
@@ -151,6 +151,7 @@ models:
       slash_threshold_amount: 10000000000000000
       light_slash_unit_amount: 5000000000000000
       serious_slash_unit_amount: 8000000000000000
+      polling_interval: 30.0
       service_endpoint_base: https://dummy_service.autonolas.tech/
     class_name: Params
   requests:
