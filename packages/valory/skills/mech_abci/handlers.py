@@ -342,11 +342,11 @@ class HttpHandler(BaseHttpHandler):
             ]
 
         # ensure we are delivering
-        grace_period = 300  # 5 min
+        grace_period = self.context.params.polling_interval * 10
         last_executed_task = (
             self.last_successful_executed_task[1]
             if self.last_successful_executed_task
-            else time.time() + grace_period * 2
+            else time.time() - grace_period * 2
         )
         last_tx_made = self.last_tx[1] if self.last_tx else time.time()
         we_are_delivering = last_executed_task < last_tx_made + grace_period

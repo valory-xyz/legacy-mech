@@ -38,12 +38,12 @@ skills:
 - valory/abstract_abci:0.1.0:bafybeihat4giyc4bz6zopvahcj4iw53356pbtwfn7p4d5yflwly2qhahum
 - valory/abstract_round_abci:0.1.0:bafybeiepfm4dz4kwdv7rjozhgekjn6dheft7ca6fih4jj4olhffn2xrhs4
 - valory/contract_subscription:0.1.0:bafybeiefuemlp75obgpxrp6iuleb3hn6vcviwh5oetk5djbuprf4xsmgjy
-- valory/mech_abci:0.1.0:bafybeihffmy2coljslcgi5cglxtrdszfpgxo2nyglagexawu5dsmhvatlq
+- valory/mech_abci:0.1.0:bafybeihyexrq3urfkeh536zkvhfxygpjc4wyipparjujaagnmhk6ggladu
 - valory/registration_abci:0.1.0:bafybeiclrvoscx5xarcg5sr7io5hcbhqxx3hjxdkzkomh2dqrsgt7cbncu
 - valory/reset_pause_abci:0.1.0:bafybeicz7p5jdarlq2yubla3korxsaetbpp2g7vaahylpqxy2fjurtfxvq
 - valory/subscription_abci:0.1.0:bafybeievufepx3n3l2wtqeyli53fm7foqngxyha5abssfu5azcj7bc3f34
 - valory/task_execution:0.1.0:bafybeie7q7kuphpya77crhit6477y7vc5k5m2qub5c43iinm2m6ulj6gm4
-- valory/task_submission_abci:0.1.0:bafybeiheedvg7xkfoktnsizuuxeruehublgdn3blcvtgrjgk6nusjza5pm
+- valory/task_submission_abci:0.1.0:bafybeif352bi3vqfingdubwnz545ftsbuz7abiliri6qitgss2murodgfq
 - valory/termination_abci:0.1.0:bafybeiety5ucnnd245p72i2pfxmuzkwglapglblbldnncozdbrbvx7obiy
 - valory/transaction_settlement_abci:0.1.0:bafybeiho77x27kfytgjnipcjco3nfhvyfdjr43vxsqmjlig7k2krmckvv4
 - valory/websocket_client:0.1.0:bafybeif7rrvsu6z4evqkhblxj3u6wwv2eqou576hgkyoehxuj7cntw7o2m
