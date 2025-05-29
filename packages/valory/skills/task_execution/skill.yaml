@@ -23,7 +23,7 @@ connections:
 - valory/ipfs:0.1.0:bafybeigon6baxksmvooghcsefde74vcy7khqwpqt2sv3mbo3aodke7lqji
 - valory/p2p_libp2p_client:0.1.0:bafybeihs5zlwa5wlozct3rjlxsirm3ve3e4buse5nfehiky6ymnnfrobne
 contracts:
-- valory/agent_mech:0.1.0:bafybeiah6b5epo2hlvzg5rr2cydgpp2waausoyrpnoarf7oa7bw33rex34
+- valory/agent_mech:0.1.0:bafybeigplm665kk52kmfhyzfr4ritcnvktyzgadddbbpp4guwsy65vyd3e
 protocols:
 - valory/acn_data_share:0.1.0:bafybeih5ydonnvrwvy2ygfqgfabkr47s4yw3uqxztmwyfprulwfsoe7ipq
 - valory/contract_api:1.0.0:bafybeidgu7o5llh26xp3u3ebq3yluull5lupiyeu6iooi2xyymdrgnzq5i
