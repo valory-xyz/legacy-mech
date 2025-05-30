@@ -74,6 +74,7 @@ WAS_LAST_READ_SUCCESSFUL = "was_last_read_successful"
 LAST_TX = "last_tx"
 PENDING_TASKS = "pending_tasks"
 
+
 class HttpCode(Enum):
     """Http codes"""
 
