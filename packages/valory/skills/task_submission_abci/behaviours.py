@@ -23,7 +23,7 @@ import threading
 import time
 from abc import ABC
 from copy import deepcopy
-from typing import Any, Dict, Generator, List, Optional, Set, Type, cast, Tuple
+from typing import Any, Dict, Generator, List, Optional, Set, Tuple, Type, cast
 
 import openai  # noqa
 from aea.helpers.cid import CID, to_v1
@@ -63,7 +63,8 @@ from packages.valory.skills.task_submission_abci.rounds import (
     TransactionPreparationRound,
 )
 from packages.valory.skills.transaction_settlement_abci.payload_tools import (
-    hash_payload_to_hex, VerificationStatus,
+    VerificationStatus,
+    hash_payload_to_hex,
 )
 
 
@@ -213,7 +214,10 @@ class TaskPoolingBehaviour(TaskExecutionBaseBehaviour, ABC):
         # If the value exists and is not None, we return True, else False
         # ref: https://github.com/valory-xyz/open-autonomy/blob/main/packages/valory/skills/transaction_settlement_abci/rounds.py#L432-L434
         try:
-            if self.synchronized_data.final_verification_status != VerificationStatus.VERIFIED:
+            if (
+                self.synchronized_data.final_verification_status
+                != VerificationStatus.VERIFIED
+            ):
                 return False, None
             final_tx_hash = self.synchronized_data.final_tx_hash
             # added for healthcheck purposes
