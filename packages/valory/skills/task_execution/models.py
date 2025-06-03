@@ -85,7 +85,7 @@ class Params(Model):
         self.mech_to_config: Dict[str, MechConfig] = self._parse_mech_configs(kwargs)
         self.max_queue_size: int = kwargs.get("max_queue_size", 30)
         self.max_executing_tasks: int = kwargs.get("max_executing_tasks", 4)
-        self.req_id_to_data = {}
+        self.req_id_to_data: Dict = {}
         self.clear_queue: bool = kwargs.get("clear_queue", False)
         super().__init__(*args, **kwargs)
 
