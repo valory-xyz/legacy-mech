@@ -134,6 +134,8 @@ dependencies:
     version: ==0.7.0
   typer:
     version: ==0.9.4
+  typing_extensions:
+    version: ==4.12.2
   prediction-market-agent-tooling:
     version: '>=0.39.0,<0.40.0'
   google-generativeai:
