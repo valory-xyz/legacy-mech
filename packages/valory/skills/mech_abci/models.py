@@ -37,6 +37,7 @@ from packages.valory.skills.task_submission_abci.models import (
 from packages.valory.skills.task_submission_abci.rounds import (
     Event as TaskExecutionEvent,
 )
+from packages.valory.skills.transaction_settlement_abci.models import TransactionParams
 from packages.valory.skills.transaction_settlement_abci.rounds import (
     Event as TransactionSettlementEvent,
 )
@@ -99,5 +100,5 @@ class SharedState(TaskExecSharedState):
         )
 
 
-class Params(TaskExecutionParams, SubscriptionParams):  # type: ignore
+class Params(TaskExecutionParams, SubscriptionParams, TransactionParams):  # type: ignore
     """A model to represent params for multiple abci apps."""
