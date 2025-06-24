@@ -56,3 +56,4 @@ backup_mech/
 .venv
 log
 .benchmark-cache
+/mech

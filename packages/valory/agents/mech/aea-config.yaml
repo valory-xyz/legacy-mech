@@ -38,12 +38,12 @@ skills:
 - valory/abstract_abci:0.1.0:bafybeihat4giyc4bz6zopvahcj4iw53356pbtwfn7p4d5yflwly2qhahum
 - valory/abstract_round_abci:0.1.0:bafybeiepfm4dz4kwdv7rjozhgekjn6dheft7ca6fih4jj4olhffn2xrhs4
 - valory/contract_subscription:0.1.0:bafybeiefuemlp75obgpxrp6iuleb3hn6vcviwh5oetk5djbuprf4xsmgjy
-- valory/mech_abci:0.1.0:bafybeiekptxgzqg5rgq2wneqqh4xfm2erapui4ahesysvfjzcmp6uuwrju
+- valory/mech_abci:0.1.0:bafybeicut5qofetdfyahsklnjmpe4j7ugrlbi7q4whv3e4bf3neqk5asty
 - valory/registration_abci:0.1.0:bafybeiclrvoscx5xarcg5sr7io5hcbhqxx3hjxdkzkomh2dqrsgt7cbncu
 - valory/reset_pause_abci:0.1.0:bafybeicz7p5jdarlq2yubla3korxsaetbpp2g7vaahylpqxy2fjurtfxvq
 - valory/subscription_abci:0.1.0:bafybeigdg372osok3ejh65edjx23pvwipexvmxejslokote26ndxtz37m4
 - valory/task_execution:0.1.0:bafybeifw2hjuo4srri3qsixfobbq3p2batumtvttaqlzszmj5ue4e6oqbu
-- valory/task_submission_abci:0.1.0:bafybeic4633sjst5ptm6qslyjpysl25blauqo7queh3egedaprwlotqvk4
+- valory/task_submission_abci:0.1.0:bafybeih24artmdoiibcp4kfveptse25fbgpjlo2pnvy3odmjg5wqif4tua
 - valory/transaction_settlement_abci:0.1.0:bafybeiho77x27kfytgjnipcjco3nfhvyfdjr43vxsqmjlig7k2krmckvv4
 - valory/websocket_client:0.1.0:bafybeif7rrvsu6z4evqkhblxj3u6wwv2eqou576hgkyoehxuj7cntw7o2m
 default_ledger: ethereum
@@ -200,6 +200,7 @@ models:
   params:
     args:
       sleep_time: ${int:1}
+      tasks_batch_size: ${int:10}
       ipfs_fetch_timeout: ${float:15.0}
       tendermint_check_sleep_delay: ${int:3}
       tendermint_p2p_url: ${str:localhost:26656}

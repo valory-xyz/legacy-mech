@@ -23,7 +23,18 @@ import threading
 import time
 from abc import ABC
 from copy import deepcopy
-from typing import Any, Dict, Generator, List, Optional, Set, Tuple, Type, cast
+from typing import (
+    Any,
+    Dict,
+    Generator,
+    Iterable,
+    List,
+    Optional,
+    Set,
+    Tuple,
+    Type,
+    cast,
+)
 
 import openai  # noqa
 from aea.helpers.cid import CID, to_v1
@@ -71,6 +82,7 @@ from packages.valory.skills.transaction_settlement_abci.payload_tools import (
 ZERO_ETHER_VALUE = 0
 AUTO_GAS = SAFE_GAS = 0
 DONE_TASKS = "ready_tasks"
+SUBMITTED_TASKS = "submitted_tasks"
 DONE_TASKS_LOCK = "lock"
 NO_DATA = b""
 ZERO_IPFS_HASH = (
@@ -79,6 +91,7 @@ ZERO_IPFS_HASH = (
 FILENAME = "usage"
 ZERO_ADDRESS = "0x0000000000000000000000000000000000000000"
 LAST_TX = "last_tx"
+REQUEST_ID_KEY = "request_id"
 
 
 class TaskExecutionBaseBehaviour(BaseBehaviour, ABC):
@@ -116,7 +129,7 @@ class TaskExecutionBaseBehaviour(BaseBehaviour, ABC):
         """Get done_tasks_lock."""
         return self.context.shared_state[DONE_TASKS_LOCK]
 
-    def remove_tasks(self, submitted_tasks: List[Dict[str, Any]]) -> None:
+    def remove_tasks(self, submitted_tasks: Iterable[Dict[str, Any]]) -> None:
         """
         Pop the tasks from shared state.
 
@@ -131,7 +144,7 @@ class TaskExecutionBaseBehaviour(BaseBehaviour, ABC):
             for done_task in done_tasks:
                 is_submitted = False
                 for submitted_task in submitted_tasks:
-                    if submitted_task["request_id"] == done_task["request_id"]:
+                    if submitted_task[REQUEST_ID_KEY] == done_task[REQUEST_ID_KEY]:
                         is_submitted = True
                         break
                 if not is_submitted:
@@ -198,15 +211,18 @@ class TaskPoolingBehaviour(TaskExecutionBaseBehaviour, ABC):
         """Handle tasks that have been already submitted before (in a prev. period)."""
         status, tx_hash = self.check_last_tx_status()
         self.context.logger.info(f"Last tx status is: {status}")
-        if status:
-            submitted_tasks = cast(
-                List[Dict[str, Any]], self.synchronized_data.done_tasks
-            )
-            self.context.logger.info(
-                f"Tasks {submitted_tasks} has already been submitted. The corresponding tx_hash is: {tx_hash}. "
-                f"Removing them from the list of tasks to be processed."
-            )
-            self.remove_tasks(submitted_tasks)
+        if not status:
+            self.context.shared_state[SUBMITTED_TASKS] = []
+            return
+        submitted_tasks = cast(
+            List[Dict[str, Any]],
+            self.synchronized_data.done_tasks[: self.params.tasks_batch_size],
+        )
+        self.context.logger.info(
+            f"Tasks {submitted_tasks} has already been submitted. The corresponding tx_hash is: {tx_hash}. "
+            f"Removing them from the list of tasks to be processed."
+        )
+        self.remove_tasks(submitted_tasks)
 
     def check_last_tx_status(self) -> Tuple[bool, Optional[str]]:
         """Check if the tx in the last round was successful or not"""
@@ -807,7 +823,7 @@ class TransactionPreparationBehaviour(
             # of the txs. The error will be logged.
             all_txs.extend(split_profit_txs)
 
-        for task in self.synchronized_data.done_tasks:
+        for task in self.synchronized_data.done_tasks[: self.params.tasks_batch_size]:
             deliver_tx = yield from self._get_deliver_tx(task)
             if deliver_tx is None:
                 # something went wrong, respond with ERROR payload for now
