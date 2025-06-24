@@ -823,7 +823,7 @@ class TransactionPreparationBehaviour(
             # of the txs. The error will be logged.
             all_txs.extend(split_profit_txs)
 
-        for task in self.synchronized_data.done_tasks[self.params.tasks_batch_size]:
+        for task in self.synchronized_data.done_tasks[: self.params.tasks_batch_size]:
             deliver_tx = yield from self._get_deliver_tx(task)
             if deliver_tx is None:
                 # something went wrong, respond with ERROR payload for now
