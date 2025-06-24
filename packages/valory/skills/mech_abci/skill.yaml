@@ -23,7 +23,7 @@ skills:
 - valory/abstract_round_abci:0.1.0:bafybeiepfm4dz4kwdv7rjozhgekjn6dheft7ca6fih4jj4olhffn2xrhs4
 - valory/registration_abci:0.1.0:bafybeiclrvoscx5xarcg5sr7io5hcbhqxx3hjxdkzkomh2dqrsgt7cbncu
 - valory/reset_pause_abci:0.1.0:bafybeicz7p5jdarlq2yubla3korxsaetbpp2g7vaahylpqxy2fjurtfxvq
-- valory/task_submission_abci:0.1.0:bafybeic4633sjst5ptm6qslyjpysl25blauqo7queh3egedaprwlotqvk4
+- valory/task_submission_abci:0.1.0:bafybeih24artmdoiibcp4kfveptse25fbgpjlo2pnvy3odmjg5wqif4tua
 - valory/transaction_settlement_abci:0.1.0:bafybeiho77x27kfytgjnipcjco3nfhvyfdjr43vxsqmjlig7k2krmckvv4
 - valory/subscription_abci:0.1.0:bafybeigdg372osok3ejh65edjx23pvwipexvmxejslokote26ndxtz37m4
 behaviours:
@@ -98,6 +98,7 @@ models:
           - stabilityai-stable-diffusion-512-v2-1
           - stabilityai-stable-diffusion-768-v2-1
       finalize_timeout: 60.0
+      tasks_batch_size: 10
       genesis_config:
         genesis_time: '2022-09-26T00:00:00.000000000Z'
         chain_id: chain-c4daS1
@@ -202,5 +203,5 @@ models:
     class_name: TendermintDialogues
 dependencies:
   open-aea-cli-ipfs:
-    version: ==1.59.0
+    version: ==1.50.0
 is_abstract: false
