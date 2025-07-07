@@ -595,11 +595,11 @@ class TaskExecutionBehaviour(SimpleBehaviour):
         self.context.logger.info(
             f"Response for request {req_id} stored on IPFS with hash {ipfs_hash}."
         )
-        self.send_data_via_acn(
-            sender_address=sender,
-            request_id=str(req_id),
-            data=ipfs_hash,
-        )
+        # self.send_data_via_acn(
+        #     sender_address=sender,
+        #     request_id=str(req_id),
+        #     data=ipfs_hash,
+        # )
         # for health check metrics
         self.set_last_executed_task(req_id)
         done_task = executing_task["done_task"]
