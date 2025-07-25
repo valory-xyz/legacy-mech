@@ -1,7 +1,6 @@
 {
     "dev": {
         "custom/valory/native_transfer_request/0.1.0": "bafybeifi2ojtjohfwy3qlvdsms5y7qa7iqbow7wq7gcjptgz2gbymve3vu",
-        "custom/valory/prediction_request_claude/0.1.0": "bafybeia74qg6simxsc5qdoi3brfu3slo3fjbkto4x2t4pv7hx4tyc7qrfa",
         "custom/valory/openai_request/0.1.0": "bafybeigz5brshryms5awq5zscxsxibjymdofm55dw5o6ud7gtwmodm3vmq",
         "custom/valory/prediction_request_embedding/0.1.0": "bafybeihtwykqnoxluqo2n4w2ccoh4xqoc6pifevol6obho3fneg7touzj4",
         "custom/valory/resolve_market/0.1.0": "bafybeidog2vsqmezxe63jqjpf7p6qmqy3opq3rppvihqtehf6k44hzyo74",
@@ -18,9 +17,6 @@
         "custom/valory/prepare_tx/0.1.0": "bafybeiggkqqyrj4n6qmtwgmx4r4qtrb2k6f67v42qyfgrgoow677vywgw4",
         "custom/valory/short_maker/0.1.0": "bafybeif63rt4lkopu3rc3l7sg6tebrrwg2lxqufjx6dx4hoda5yzax43fa",
         "custom/napthaai/prediction_url_cot/0.1.0": "bafybeicdqi4udhqhtmlnk7mbmywlce4wnyj7vcpjhl7ffgmwhnyaqigdca",
-        "custom/napthaai/prediction_url_cot_claude/0.1.0": "bafybeicbjywni5hx5ssoiv6tnnjbqzsck6cmtsdpr6m562z6afogz5eh44",
-        "custom/napthaai/prediction_request_reasoning_claude/0.1.0": "bafybeihtx2cejxoy42jwk2i5m4evfzz537aic5njuawxnzdzwlo63kdduq",
-        "custom/napthaai/prediction_request_rag_claude/0.1.0": "bafybeickr32t7nmapuoymjyo3cf5rr2v2zapksxcivuqsgjr2gn6zo6y7y",
         "custom/napthaai/prediction_request_rag_cohere/0.1.0": "bafybeid56svuhz3w47lq4kpsl72gsc2h2y7fxmndjrieo2rwq2vac6n6hy",
         "custom/valory/prediction_request_lite/0.1.0": "bafybeibne6l4jmyuijqzs4gkrb3mi2iyy36fjj7apzs2kqheeu4ihgjm3y",
         "custom/nickcom007/prediction_request_sme_lite/0.1.0": "bafybeic3tjzls5iqs7mljdohwuu4cmuzf2warfxqr2htorbka4nivlbrbq",
@@ -70,5 +66,29 @@
         "agent/valory/mech/0.1.0": "bafybeigso7ct3gxd5rdn5pdkldavydreyd6ssi76ukzllxicbl4k5ticiu",
         "service/valory/mech/0.1.0": "bafybeigavcbygzhxhsrsdggxrncmmv2riztkd6vf5tfnoejtfj2vr36ps4"
     },
-    "third_party": {}
+    "third_party": {
+        "protocol/open_aea/signing/1.0.0": "bafybeihv62fim3wl2bayavfcg3u5e5cxu3b7brtu4cn5xoxd6lqwachasi",
+        "protocol/valory/abci/0.1.0": "bafybeiaqmp7kocbfdboksayeqhkbrynvlfzsx4uy4x6nohywnmaig4an7u",
+        "protocol/valory/contract_api/1.0.0": "bafybeidgu7o5llh26xp3u3ebq3yluull5lupiyeu6iooi2xyymdrgnzq5i",
+        "protocol/valory/http/1.0.0": "bafybeifugzl63kfdmwrxwphrnrhj7bn6iruxieme3a4ntzejf6kmtuwmae",
+        "protocol/valory/ledger_api/1.0.0": "bafybeihdk6psr4guxmbcrc26jr2cbgzpd5aljkqvpwo64bvaz7tdti2oni",
+        "protocol/valory/acn/1.1.0": "bafybeidluaoeakae3exseupaea4i3yvvk5vivyt227xshjlffywwxzcxqe",
+        "protocol/valory/ipfs/0.1.0": "bafybeiftxi2qhreewgsc5wevogi7yc5g6hbcbo4uiuaibauhv3nhfcdtvm",
+        "protocol/valory/tendermint/0.1.0": "bafybeig4mi3vmlv5zpbjbfuzcgida6j5f2nhrpedxicmrrfjweqc5r7cra",
+        "contract/valory/service_registry/0.1.0": "bafybeicbxmbzt757lbmyh6762lrkcrp3oeum6dk3z7pvosixasifsk6xlm",
+        "contract/valory/gnosis_safe_proxy_factory/0.1.0": "bafybeib6podeifufgmawvicm3xyz3uaplbcrsptjzz4unpseh7qtcpar74",
+        "contract/valory/gnosis_safe/0.1.0": "bafybeibq77mgzhyb23blf2eqmia3kc6io5karedfzhntvpcebeqdzrgyqa",
+        "contract/valory/multisend/0.1.0": "bafybeig5byt5urg2d2bsecufxe5ql7f4mezg3mekfleeh32nmuusx66p4y",
+        "connection/valory/abci/0.1.0": "bafybeiclexb6cnsog5yjz2qtvqyfnf7x5m7tpp56hblhk3pbocbvgjzhze",
+        "connection/valory/ipfs/0.1.0": "bafybeigon6baxksmvooghcsefde74vcy7khqwpqt2sv3mbo3aodke7lqji",
+        "connection/valory/ledger/0.19.0": "bafybeietcbncwhrimjm6a7fqpfxrwpotpbiik2yeoubfy7r2jywxmy25zy",
+        "connection/valory/p2p_libp2p_client/0.1.0": "bafybeihs5zlwa5wlozct3rjlxsirm3ve3e4buse5nfehiky6ymnnfrobne",
+        "connection/valory/http_server/0.22.0": "bafybeihpgu56ovmq4npazdbh6y6ru5i7zuv6wvdglpxavsckyih56smu7m",
+        "connection/valory/http_client/0.23.0": "bafybeih5vzo22p2umhqo52nzluaanxx7kejvvpcpdsrdymckkyvmsim6gm",
+        "skill/valory/abstract_abci/0.1.0": "bafybeihat4giyc4bz6zopvahcj4iw53356pbtwfn7p4d5yflwly2qhahum",
+        "skill/valory/abstract_round_abci/0.1.0": "bafybeiepfm4dz4kwdv7rjozhgekjn6dheft7ca6fih4jj4olhffn2xrhs4",
+        "skill/valory/transaction_settlement_abci/0.1.0": "bafybeiho77x27kfytgjnipcjco3nfhvyfdjr43vxsqmjlig7k2krmckvv4",
+        "skill/valory/reset_pause_abci/0.1.0": "bafybeicz7p5jdarlq2yubla3korxsaetbpp2g7vaahylpqxy2fjurtfxvq",
+        "skill/valory/registration_abci/0.1.0": "bafybeiclrvoscx5xarcg5sr7io5hcbhqxx3hjxdkzkomh2dqrsgt7cbncu"
+    }
 }
