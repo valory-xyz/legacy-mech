@@ -346,7 +346,7 @@ class HttpHandler(BaseHttpHandler):
         last_executed_task = (
             self.last_successful_executed_task[1]
             if self.last_successful_executed_task
-            else time.time() + grace_period * 2
+            else time.time() - grace_period * 2
         )
         last_tx_made = self.last_tx[1] if self.last_tx else time.time()
         we_are_delivering = last_executed_task < last_tx_made + grace_period
@@ -366,6 +366,7 @@ class HttpHandler(BaseHttpHandler):
             "current_round": current_round,
             "previous_rounds": previous_rounds,
             "is_transitioning_fast": is_transitioning_fast,
+            "is_healthy": (we_are_delivering and we_can_get_new_reqs),
             "last_successful_read": {
                 "block_number": self.last_successful_read[0],
                 "timestamp": self.last_successful_read[1],
@@ -386,7 +387,6 @@ class HttpHandler(BaseHttpHandler):
             if self.last_tx
             else None,
             "queue_size": len(self.context.shared_state.get(PENDING_TASKS, [])),
-            "is_ok": (we_are_delivering and we_can_get_new_reqs),
         }
 
         self._send_ok_response(http_msg, http_dialogue, data)
