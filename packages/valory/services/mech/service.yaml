@@ -69,6 +69,13 @@ type: skill
         agent_funding_amount: ${AGENT_FUNDING_AMOUNT:int:200000000000000000}
         minimum_agent_balance: ${MINIMUM_AGENT_BALANCE:int:100000000000000000}
         tasks_batch_size: ${TASKS_BATCH_SIZE:int:10}
+    randomness_api: &id003
+      args:
+        method: ${RANDOMNESS_API_METHOD:str:GET}
+        response_key: ${RANDOMNESS_API_RESPONSE_KEY:str:null}
+        response_type: ${RANDOMNESS_API_RESPONSE_TYPE:str:dict}
+        retries: ${RANDOMNESS_API_RETRIES:int:5}
+        url: ${RANDOMNESS_API_URL:str:https://drand.cloudflare.com/public/latest}
 1:
   models:
     params:
@@ -109,6 +116,7 @@ type: skill
         agent_funding_amount: ${AGENT_FUNDING_AMOUNT:int:200000000000000000}
         minimum_agent_balance: ${MINIMUM_AGENT_BALANCE:int:100000000000000000}
         tasks_batch_size: ${TASKS_BATCH_SIZE:int:10}
+    randomness_api: *id003
 2:
   models:
     params:
@@ -149,6 +157,7 @@ type: skill
         agent_funding_amount: ${AGENT_FUNDING_AMOUNT:int:200000000000000000}
         minimum_agent_balance: ${MINIMUM_AGENT_BALANCE:int:100000000000000000}
         tasks_batch_size: ${TASKS_BATCH_SIZE:int:10}
+    randomness_api: *id003
 3:
   models:
     params:
@@ -189,6 +198,7 @@ type: skill
         agent_funding_amount: ${AGENT_FUNDING_AMOUNT:int:200000000000000000}
         minimum_agent_balance: ${MINIMUM_AGENT_BALANCE:int:100000000000000000}
         tasks_batch_size: ${TASKS_BATCH_SIZE:int:10}
+    randomness_api: *id003
 ---
 public_id: valory/task_execution:0.1.0
 type: skill
